@@ -55,32 +55,3 @@
     }
 
 
-COLOCA NO REGISTER.PHP
-
-<?php
-require_once 'users.php';
-$u = new User
-?>
-
-<?php
-isset($_POST['user'])
-{
-    $user = addslashes($_POST['user']);
-    $password = addslashes($_POST['password']);
-    $name = addslashes($_POST['name']);
-    if(!empty($name) && !empty($password) && !empty($name)){
-        $u->connect("logindobanco","localhost","root","");
-            if($u->msgError == ""){
-                $u->cadastrar($name,$user,$password);
-            } else {
-                echo "Erro: ".$u->msgError;
-            }
-    } else {
-        echo "Preenche ai seu otario"
-    }
-}
-
-
-?>
-
-COLOCAR O MD5 NA SENHA A IDIOTA ESQUECEU -> (md5($password))
