@@ -5,8 +5,7 @@
      private $pdo;
      public $msgError = "";
 
-    public function connect($nome, $host, $usuario, $senha)
-    {
+    public function connect($nome, $host, $usuario, $senha) {
         global $pdo;
         global $msgError;
         try {
@@ -14,9 +13,10 @@
         } catch (PDOException $e) {
             $msgError = $e->getMessage();
         }
+        
+    }
 
-    public function register($name, $user, $password)
-    {
+    public function register($name, $user, $password) {
         global $pdo;
 
         $sql = $pdo->prepare("SELECT user_id FROM users WHERE user = :u").
@@ -33,10 +33,7 @@
             return true;
         }
 
-
     }
-
-   
 
     public function login($user, $password) {
         $sql = $pdo->prepare("SELECT id_user from users WHERE user = :u AND password = :p");
@@ -46,7 +43,7 @@
         if($sql->rowCount() > 0){
         $data = $sql->fetch();
         sessions_start();
-        $_SESSION['id_user'] = $data['id_user']
+        $_SESSION['id_user'] = $data['id_user'];
             return true;
         } else {
             return false;
@@ -54,4 +51,4 @@
 
     }
 
-
+ }
