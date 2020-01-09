@@ -29,7 +29,7 @@ if(isset($_POST['user'])) {
     if(!empty($name) && !empty($password) && !empty($name)){
         $u->connect("logindobanco","localhost","root","");
             if($u->msgError == ""){
-                if($u->register($name,$user,(md5($password)){
+                if($u->register($name,$user,(md5($password)))){
                     echo "cadastrado com sucesso";
                 } else {
                     echo "Ja cadastrado";
