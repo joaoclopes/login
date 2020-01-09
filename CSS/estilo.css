@@ -67,3 +67,14 @@ input[type=submit] {
   ::-ms-input-placeholder { /* Microsoft Edge */
     color: red;
   }
+
+  div#msgSuccess {
+    width: 420px;
+    margin: 10px auto;
+  }
+
+  div.msgError {
+    width: 420px;
+    margin: 10px auto;
+    padding: 10px;
+  }

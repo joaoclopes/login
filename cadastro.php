@@ -27,18 +27,36 @@ if(isset($_POST['user'])) {
     $password = addslashes($_POST['password']);
     $name = addslashes($_POST['name']);
     if(!empty($name) && !empty($password) && !empty($name)){
-        $u->connect("logindobanco","localhost","root","");
+        $u->connect("database_login","localhost","root","");
             if($u->msgError == ""){
                 if($u->register($name,$user,(md5($password)))){
-                    echo "cadastrado com sucesso";
+                    ?>
+                    <div id="msgSuccess">
+
+                    cadastrado com sucesso
+                    
+                    </div>
+<?php  
                 } else {
-                    echo "Ja cadastrado";
+                    ?>
+                    <div class="msgError">
+
+                    Ja cadastrado
+
+                    </div>
+                    <?php
                 }
             } else {
-                echo "Erro: ".$u->msgError;
+                ?>
+                <div class="msgError">
+
+                <?php echo "Erro: ".$u->msgError; ?>
+
+                </div>
+                <?php
             }
     } else {
-        echo "Preenche ai seu otario"
+        echo "Preenche ai seu otario";
     }
 }
 

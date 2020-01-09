@@ -19,7 +19,7 @@
     public function register($name, $user, $password) {
         global $pdo;
 
-        $sql = $pdo->prepare("SELECT user_id FROM users WHERE user = :u").
+        $sql = $pdo->prepare("SELECT user_id FROM users WHERE user = :u");
         $sql->bindValue(":u",$user);
         $sql->execute();
         if($sql->rowCount() > 0){
