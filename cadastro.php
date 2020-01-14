@@ -26,7 +26,7 @@ if(isset($_POST['user'])) {
     $user = addslashes($_POST['user']);
     $password = addslashes($_POST['password']);
     $name = addslashes($_POST['name']);
-    if(!empty($name) && !empty($password) && !empty($name)){
+    if(!empty($user) && !empty($password) && !empty($name)){
         $u->connect("logindobanco","localhost","root","");
             if($u->msgError == ""){
                 if($u->register($name,$user,(md5($password)){
