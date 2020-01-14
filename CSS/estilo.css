@@ -1,0 +1,80 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+body {
+    background-image: url("IMAGEM/COLOCAAIMAGEMAQUI")
+
+}
+
+input {
+    display: block;
+    height: 55px;
+    width: 400px;
+    margin: 10px;
+    border: 1px solid black;
+    padding: 10px 20px;
+    font-size: 16pt;
+    background-color: rgba(255,255,255,0.01);
+    outline: none;
+}
+
+div#corpo-cad {
+    /*background-color: red;*/
+    width:420px;
+    margin:130px auto 0px auto;
+}
+
+div#corpo-form {
+    /*background-color: red;*/
+    width:420px;
+    margin:150px auto 0px auto;
+}
+
+div#corpo-form {
+    text-align: center;
+    padding: 20px;
+}
+
+a {
+   color: depnde;
+   text-decoration: none;
+   text-align: center;
+   display: block;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+input[type=submit] {
+    background-color: aqua;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: red;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: red;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: red;
+  }
+
+  div#msgSuccess {
+    width: 420px;
+    margin: 10px auto;
+  }
+
+  div.msgError {
+    width: 420px;
+    margin: 10px auto;
+    padding: 10px;
+  }
