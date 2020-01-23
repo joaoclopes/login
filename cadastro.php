@@ -3,23 +3,7 @@ require_once 'users.php';
 $u = new User
 ?>
 
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="CSS/estilo.css">
-</head>
-<body>
-<div id=corpo-cad>
-    <h1>Cadastro</h1>
-    <form method="POST">
-    <input type="text" name="name" placeholder="Nome" maxlength="30">
-    <input type="text" name="user" placeholder="User" maxlength="15">
-    <input type="password" name="password" placeholder="Senha" maxlength="32">
-    <input type="submit" value="Enviar">
-    <a href="index.php"> <strong>Voltar</strong> </a>
-    </form>
-</div>
+
 
 <?php
 if(isset($_POST['user'])) {
@@ -30,30 +14,12 @@ if(isset($_POST['user'])) {
         $u->connect("logindobanco","localhost","root","");
             if($u->msgError == ""){
                 if($u->register($name,$user,(md5($password)))){
-                    ?>
-                    <div id="msgSuccess">
-
-                    cadastrado com sucesso
-                    
-                    </div>
-<?php  
+                    echo "cadastrado com sucesso";
                 } else {
-                    ?>
-                    <div class="msgError">
-
-                    Ja cadastrado
-
-                    </div>
-                    <?php
+                   echo "Ja cadastrado";
                 }
             } else {
-                ?>
-                <div class="msgError">
-
-                <?php echo "Erro: ".$u->msgError; ?>
-
-                </div>
-                <?php
+                echo "Erro: ".$u->msgError;
             }
     } else {
         echo "Preenche ai seu otario";
@@ -62,6 +28,3 @@ if(isset($_POST['user'])) {
 
 
 ?>
-
-</body>
-</html>
