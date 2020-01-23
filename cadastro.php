@@ -3,8 +3,6 @@ require_once 'users.php';
 $u = new User
 ?>
 
-
-
 <?php
 if(isset($_POST['user'])) {
     $user = addslashes($_POST['user']);
@@ -25,6 +23,4 @@ if(isset($_POST['user'])) {
         echo "Preenche ai seu otario";
     }
 }
-
-
 ?>
