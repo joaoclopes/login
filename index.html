@@ -3,18 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Cadastro</title>
+    <link rel="icon" href="img/favicon.ico" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
-<body>
-<div id=corpo-cad>
-    <h1>Cadastro</h1>
-    <form method="POST" action="cadastro.php">
-    <input type="text" name="name" placeholder="Nome" maxlength="30" class="form-control">
-    <input type="text" name="user" placeholder="User" maxlength="15">
-    <input type="password" name="password" placeholder="Senha" maxlength="32">
-    <input type="submit" value="Enviar">
-    <a href="index.php"> <strong>Voltar</strong> </a>
-    </form>
+<body class="text-center">
+<div id=corpo-cad class="row" style="text-align: center;">
+        <div class="align-middle" style="width: 16rem;">
+            <div class="card-body">
+                <h1>Cadastro</h1>
+                <form method="POST" action="/cadastro.php" class="form-signin">
+                    <input type="text" name="name" placeholder="Nome" maxlength="30" class="form-control">
+                    <input type="text" name="user" placeholder="User" maxlength="15" class="form-control">
+                    <input type="password" name="password" placeholder="Senha" maxlength="32" class="form-control">
+                    <button type="submit" value="Enviar" class="btn btn-info">Enviar</button>
+                    <button type="reset" class="btn btn-warning">Limpar</button>
+                    <a href="index.php">Voltar</a>
+                </form>
+            </div>
+    </div>
+    
 </div>
 
 
