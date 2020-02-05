@@ -63,3 +63,73 @@ Fluxo de Exceções:
 
 1.1 - Se o usuário digitar algum dado errado o sistema irá exibir a mensagem de erro(MSG02).
 
+
+CASOS DE TESTE
+
+CT001 - Loggin válido
+
+Pré-condições: Possuir a ferramenta aberta.
+
+Procedimento:  
+1 - Inserir dados de login válido;
+2 - Clicar no botão "Enviar";
+3 - Aparecer mensagem: "Logado com sucesso".
+
+Resultado esperado: Conseguir logar na ferramenta.
+
+Dados de Entrada: Login válido que esteja cadastrado no banco de dados.
+
+Critérios Especiais: Não se aplica.
+
+Implementação: Manual.
+
+CT002 - Loggin inválido
+
+Pré-condições: Possuir a ferramenta aberta.
+
+Procedimento:  
+1 - Inserir dados de login inválido;
+2 - Clicar no botão "Enviar";
+3 - Aparecer mensagem: "Você não possui cadastro".
+
+Resultado esperado: Mensagem para cadastrar-se no sistema.
+
+Dados de Entrada: Login inválido que não esteja cadastrado no banco de dados.
+
+Critérios Especiais: Não se aplica.
+
+Implementação: Manual.
+
+CT003 - Cadastro com dados válidos
+
+Pré-condições: Possuir a ferramenta aberta.
+
+Procedimento:  
+1 - Inserir dados de cadastro válidos;
+2 - Clicar no botão "Enviar";
+3 - Aparecer mensagem: "Cadastrado com sucesso".
+
+Resultado esperado: Conseguir se cadastrar na ferramenta.
+
+Dados de Entrada: dados válidos.
+
+Critérios Especiais: Não se aplica.
+
+Implementação: Manual.
+
+CT004 - Cadastro inválido
+
+Pré-condições: Possuir a ferramenta aberta.
+
+Procedimento:  
+1 - Inserir dados de cadastro inválidos;
+2 - Clicar no botão "Enviar";
+3 - Aparecer mensagem: "Dados inválidos, tente novamente".
+
+Resultado esperado: Mensagem de erro no cadastro.
+
+Dados de Entrada: Dados inválidos para cadastro.
+
+Critérios Especiais: Não se aplica.
+
+Implementação: Manual.
