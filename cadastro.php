@@ -1,9 +1,7 @@
 <?php
 require_once 'users.php';
-$u = new User
-?>
+$u = new User;
 
-<?php
 if(isset($_POST['user'])) {
     $user = addslashes($_POST['user']);
     $password = addslashes($_POST['password']);
@@ -25,4 +23,22 @@ if(isset($_POST['user'])) {
         }
     }
 }
-?>
+
+
+
+$testeRegisterValido = register;
+echo "Starting the activities <br> <br>";
+
+if ($testeRegisterValido(Joao, joaocl, Joaovitor1) == true) {
+    echo "Ta correto meu amigo <br> <br>";
+} else {
+    echo "Ta errado meu amigo <br> <br>";
+}
+
+echo "Second test, invalid password <br> <br>";
+
+if ($testeRegisterInvalido(Joao, joaocl, joaovitor1) == false) {
+    echo "Ta correto meu amigo <br> <br>";
+} else {
+    echo "Ta errado meu amigo <br> <br>";
+}
