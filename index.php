@@ -1,11 +1,11 @@
 <?php
-require_once('UserController.php');
+require_once 'userController.php';
 
 
-$action = "UserController";
-$method = "cadastrar";
+$getAction = $_GET["action"];
+$getMethod = $_GET["method"];
 
+$action = $getAction;
+$method = $getMethod;
 
-$action->$method();
-
-
+$newRegister = new UserController;
