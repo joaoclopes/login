@@ -8,4 +8,8 @@ $getMethod = $_GET["method"];
 $action = $getAction;
 $method = $getMethod;
 
-$newRegister = new UserController;
+$newRegister = new $action;
+
+$newRegister->action = $action;
+$newRegister->method = $method;
+$newRegister->cadastrar();
