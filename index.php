@@ -14,9 +14,9 @@ $newRegister->action = $action;
 $newRegister->method = $method;
 $newRegister->cadastrar();*/
 
-if(array_key_exists('action', $_REQUEST) && array_key_exists('method', $_REQUEST)) {
-    $class = $_REQUEST['action'];
-    $method = $_REQUEST['method'];
+if(array_key_exists('action', $_GET) && array_key_exists('method', $_GET)) {
+    $class = $_GET['action'];
+    $method = $_GET['method'];
 
         if(!class_exists($class)) {
             echo 'Não tem class';
