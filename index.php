@@ -27,8 +27,6 @@ if(array_key_exists('action', $_GET) && array_key_exists('method', $_GET)) {
             $controller = new $class;
             $controller->$method();
         }
-        
-    
 } else {
     echo 'Não tem valores';
 }
