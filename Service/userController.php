@@ -1,6 +1,6 @@
 <?php
 
-class userController {
+class UserController {
 
     public function cadastrar() {
         require_once 'users.php';
