@@ -1,11 +1,12 @@
 <?php
 
+require_once 'DatabaseRepository.php'
+
  Class UserRepository
  {
-     private $pdo;
      public $msgError = "";
 
-    public function connect($nome, $host, $usuario, $senha) {
+    /**public function connect($nome, $host, $usuario, $senha) {
         global $pdo;
         global $msgError;
         try {
@@ -14,12 +15,12 @@
             $msgError = $e->getMessage();
         }
         
-    }
+    }**/
 
     public function register($name, $user, $password) {
-        global $pdo;
-
-        $sql = $pdo->prepare("SELECT user_id FROM users WHERE user = :u");
+        
+        $connection = DatabaseConnection::getConnection();
+        $sql = $connection->prepare("SELECT user_id FROM users WHERE user = :u");
         $sql->bindValue(":u",$user);
         $sql->execute();
         if($sql->rowCount() > 0){
@@ -36,7 +37,8 @@
     }
 
     public function login($user, $password) {
-        $sql = $pdo->prepare("SELECT id_user from users WHERE user = :u AND password = :p");
+        $connection = DatabaseConnection::getConnection();
+        $sql = $connection->prepare("SELECT id_user from users WHERE user = :u AND password = :p");
         $sql->bindValue(":u",$user);
         $sql->bindValue(":p",$password);
         $sql->execute();
